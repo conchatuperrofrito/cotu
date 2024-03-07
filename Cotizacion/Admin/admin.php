@@ -63,11 +63,14 @@
         <label for="validationCustom01" class="form-label">Ingrese Nro. Código Cotización</label>
         <input type="number" class="form-control" name="nroCotizacion" placeholder="&#xf162; 00001" required>
       </div>
+      <!-- oninput="this.value = this.value.replace(/\s/g, '')" BALIDACION ENTIENPO REAL  -->
       <div class="col-md-8">
         <label for="validationCustom01" class="form-label">Ingrese la Descripción</label>
         <textarea class="form-control" name="descripcion" placeholder="&#xf1d8; description(max 400-caracteres)..."
-          required rows="2" maxlength="400" oninput="this.value = this.value.replace(/\s/g, '')"></textarea>
+          required rows="2" maxlength="400"></textarea>
+        <span id="mensajeError"></span>
       </div>
+
       <div class="col-md-4">
         <label for="validationCustom02" class="form-label">Tipo</label>
         <select class="form-select estado" name="tipo" id="validationCustom02">

@@ -127,7 +127,7 @@ if (isset($_POST['submit'])) {
 
          <h1 class="nombresUpdate">NOMBRE</h1>
          <input type="text" name="name" value="<?= $fetch_profile['tadmin_nombre']; ?>" required
-            placeholder="ingresa tu nombre" maxlength="20" class="box">
+            placeholder="ingresa tu nombre" maxlength="100" class="box">
          <h1 class="nombresUpdate">ESTADO</h1>
          <select class="box" name="estado" id="validationCustom02">
             <!-- <option selected value="MostrarTodo">Mostrar Todo</option> -->
@@ -136,7 +136,7 @@ if (isset($_POST['submit'])) {
          </select>
          <h1 class="nombresUpdate">CELULAR</h1>
          <input type="number" name="telefono" value="<?= $fetch_profile['tadmin_telefono']; ?>" required
-            placeholder="enter your username" maxlength="20" class="box"
+            placeholder="enter your username" maxlength="9" class="box"
             oninput="this.value = this.value.replace(/\s/g, '')">
          <h1 class="nombresUpdate">TIPO</h1>
          <select class="box" name="tipo" id="validationCustom02">
@@ -145,7 +145,7 @@ if (isset($_POST['submit'])) {
          </select>
          <h1 class="nombresUpdate">CORREO</h1>
          <input type="text" name="correo" value="<?= $fetch_profile['tadmin_correo']; ?>" required
-            placeholder="ingresa tu correo" maxlength="20" class="box"
+            placeholder="ingresa tu correo" maxlength="100" class="box"
             oninput="this.value = this.value.replace(/\s/g, '')">
          <h1 class="nombresUpdate">CONTRASEÑA</h1>
          <input type="password" name="old_pass" placeholder="ingrese su antigua contraseña" maxlength="20" class="box"

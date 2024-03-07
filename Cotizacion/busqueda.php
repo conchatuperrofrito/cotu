@@ -4,9 +4,9 @@ $resultado = null;
 
 /* Un arreglo de las columnas a mostrar en la tabla */
 // $columns = ['nroCotizacion ', 'fechaEntrega', 'descripcion', 'estado', 'anio'];
-$columns = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot'];
-$columnsa = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot'];
-$columnsb = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot'];
+$columns = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot', 'estado'];
+$columnsa = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot', 'estado'];
+$columnsb = ['nroCotizacion', 'cotizacion_tipo', 'dependencia', 'descripcion', 'fechaEntrega', 'cotizacion_anexo4', 'cotizacion_anexo2', 'cotizacion_anexo3', 'pdfCot', 'estado'];
 
 /* Nombre de la tabla */
 $table = "cotizacion";
@@ -200,6 +200,8 @@ if ($num_rows > 0) {
         $output['data'] .= '<td style=" width: 100px;">' . $row['cotizacion_tipo'] . '</td>';
         $output['data'] .= '<td style=" width: 200px;">' . $row['dependencia'] . '</td>';
         $output['data'] .= '<td style="    text-align: left;">' . $row['descripcion'] . '</td>';
+        $output['data'] .= '<td style=" width: 100px;">' . $row['estado'] . '</td>';
+
         $output['data'] .= '<td style=" width: 100px;">' . $row['fechaEntrega'] . '</td>';
 
         $output['data'] .= '<td style=" width: 100px;">

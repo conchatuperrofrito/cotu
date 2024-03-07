@@ -19,6 +19,34 @@
 </head>
 
 <body>
+
+    <?php
+    include("conneccion/conection.php");
+    $sqlState = "SELECT nroCotizacion, fechaEntrega FROM cotizacion";
+    $resultstate = $conexion->query($sqlState);
+    if ($resultstate->num_rows > 0) {
+        // Recorrer cada fila de resultados
+        while ($rowstate = $resultstate->fetch_assoc()) {
+            // Obtener la fecha de la fila
+            $idstate = $rowstate["nroCotizacion"];
+
+            $fecha = $rowstate["fechaEntrega"];
+
+            // Determinar el estado basado en la fecha
+            $estado = ($fecha < date("Y-m-d")) ? "cerrado" : "abierto";
+            // Actualizar el campo "estado" en la tabla
+            $sql_update = "UPDATE cotizacion SET estado = '$estado' WHERE nroCotizacion = $idstate";
+            $conexion->query($sql_update);
+
+        }
+    } else {
+        echo "No se encontraron resultados";
+    }
+
+    // Cerrar conexión
+    $conexion->close();
+    ?>
+
     <!-- load  start-->
     <style>
         /* Estilos para la imagen de carga */
@@ -121,11 +149,15 @@
             }
         </style>
         <div class="container py-4 text-center">
-            <h3 class="titulo" style="color: #0c6cccc7;  margin-bottom: 25px;">LISTA DE COTIZACIONES y SERVICIOS
+            <h3 class="titulo" style="color: #0c6cccc7;  margin-bottom: 25px;">LISTA DE BIENES y SERVICIOS
             </h3>
 
             <div class="og-contianer">
-                <h6 style=" text-align: start;"> Limpie el filtro para usar filtro de coincidencias </h6>
+                <h6 style=" text-align: start;"> <span style="color: red;">importante!&nbsp;&nbsp;</span>Limpie el
+                    filtro
+                    para
+                    usar
+                    filtro de coincidencias </h6>
 
                 <div class="row g-4 cabezerafilter" style="justify-content: space-between;">
 
@@ -133,9 +165,9 @@
                     <!-- buscador  -->
                     <div class="col-5" style="display: flex; justify-content: space-between;">
                         <select class="" id="optiona" placeholder="Tipo" style="height: 50px;">
-                            <option value="" selected="">Tipo todos</option>
+                            <option value="" selected="">todos</option>
                             <option name="abierto" value="abierto">abierto</option>
-                            <option name="serrado" value="serrado">serrado</option>
+                            <option name="cerrado" value="cerrado">cerrado</option>
                         </select>
                         &nbsp;
                         &nbsp;
@@ -143,7 +175,7 @@
                         &nbsp;
                         <!-- <select class="" id="optionb" placeholder="dependencia"> -->
                         <select class="" id="optionb" placeholder="dependencia" style="height: 50px;">
-                            <option value="" selected="">dependencia todos</option>
+                            <option value="" selected="">todos</option>
                             <option name="Unamba" value="Unamba">Universidad Nacional Micaela
                                 Bastidas de Apurímac</option>
                             <!-- <option name="Unamba-RRH" value="Unamba-RRH">Unamba-RRH</option>
@@ -224,6 +256,8 @@
                                     DEPENDENCIA</th>
                                 <th class="sort asc"><i class="ri-arrow-drop-down-fill" style=" color: green;"></i>
                                     DESCRIPCIÓN</th>
+                                <th class="sort asc"><i class="ri-arrow-drop-down-fill" style=" color: green;"></i>
+                                    ESTADO</th>
                                 <th class="sort asc"><i class="ri-arrow-drop-down-fill" style=" color: green;"></i>
                                     FECHA
                                     PLAZO</th>

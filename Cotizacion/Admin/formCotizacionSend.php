@@ -31,9 +31,8 @@ if (isset($_POST['submit'])) {
     $tmp_name = $_FILES["pdfFile"]["tmp_name"];
     $namepdf = basename($_FILES["pdfFile"]["name"]);
     $resultadoEncripARCHIVO = encrypt($namepdf, $continuee);
-    move_uploaded_file($tmp_name, "filePDFcotizacion/" . $resultadoEncripARCHIVO);
-
-
+    $numero_aleatorio = rand(100000000, 999999999);
+    move_uploaded_file($tmp_name, "filePDFcotizacion/" . $resultadoEncripARCHIVO . $numero_aleatorio);
     $continue = "m3m0c0d3";
 
     function encryptt($string, $ik)
