@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/ampay.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+img{
+    width: 70%;
+    height: 70%;
+    margin-top: 40px;
+}
+.hed h1{
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;  
+    font-weight: bold;
+}
+.hed{
+    text-align: center;
+    width: 900px;
+    margin-left: -50px;
+}
+.insertData{
+    font-family: 'Times New Roman', Times, serif;  
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 800px !important;
+    margin-right: 50px !important;
+    height: 400px;
+    align-items: center;
+    margin-top: 120px;
+    background-color: rgba(247, 244, 241, 0.507);
+}
+
+.insertData form{
+    margin-top: 5%;
+}
+
+.buttons{
+    text-align: center;
+    margin-top: 5%;
+}

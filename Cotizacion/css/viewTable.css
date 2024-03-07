@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+
+.button-close{
+    margin: 2%;
+    position: absolute;
+}
+.button-close i{
+    margin: 0 5px;
+}
+.container{
+    text-align: center;
+}
+.container .title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 2% 25% 5% 25%;
+}
+.container .title h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+.container .title img{
+    width: 100px;
+    height: 100px;
+}
+
+.container .tmr thead{
+    margin-top: 10%;
+   background: red !important; 
+}

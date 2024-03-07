@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Oswald&display=swap');
+
+* {
+    border-radius: 0px;
+
+}
+
+/* og-contianer */
+body {
+    background-color: white;
+}
+
+.form-select {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.buttons {
+    margin-top: 0.3rem;
+    /* margin-bottom: 0.3rem; */
+}
+
+select {
+    border-radius: 0.5rem;
+    border-color: #c6ddec;
+
+}
+
+option {
+    /* background-color: #762222; */
+    /* Cambiar color de fondo de las opciones */
+    color: #737272;
+    /* Cambiar color del texto de las opciones */
+
+    border-radius: 0.5rem;
+    border-color: #c6ddec;
+}
+
+.titulo {
+
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 2.3rem;
+}
+
+.registropagina {
+    display: flex;
+    text-align: start;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+}
+
+.cabezerafilter {
+    font-weight: bold;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+
+}
+
+.inputs,
+.og-contianer {
+    font-family: 'JetBrains Mono', monospace;
+    /* margin-top: 2.3rem; */
+}
+
+.tbody {
+    color: #6c6c6c;
+    background-color: rgb(254, 255, 255);
+}
+
+.fecha-pasada {
+    background-color: #143d6f63;
+}
+
+.fecha-pasada .btn {
+    display: none;
+}

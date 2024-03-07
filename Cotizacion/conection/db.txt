@@ -1,0 +1,33 @@
+create database dbcotizacion;
+
+create table cotizacion(
+anio varchar (30),
+dependencia varchar (50),
+descripcion varchar (200),
+estado varchar (50),
+fechaEntrega date,
+nroCotizacion int,
+pdfCot varchar(50)
+);
+create table ejemplo(
+
+    id  int PRIMARY KEY AUTO_INCREMENT,
+    name varchar (50),
+    password varchar (50)
+);
+create table tcontrol(
+Columnid int PRIMARY KEY AUTO_INCREMENT,
+Columninspeccion varchar (200),
+Columnname varchar (70),
+Columntimes varchar (70)
+);
+ create table tsuvirpdf(
+tsuvirpdf_codigoConbocatoria varchar (50),
+    tsuvirpdf_correo varchar(100),
+  Columntsuvirpdf_direccion varchar(100),
+Columntsuvirpdf_direccionPDF varchar(100),
+Columntsuvirpdf_dni varchar(8),
+Columntsuvirpdf_nombre varchar(100),
+Columntsuvirpdf_ruc varchar(11),
+Columntsuvirpdf_telefono varchar(9)
+ )
